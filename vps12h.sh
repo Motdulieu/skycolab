@@ -2,7 +2,7 @@ echo "Download ngrok"
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip.1 > /dev/null 2>&1
-read -p "Paste Ngrock Authtoken: " CRP 
+read -p "Paste Ngrock Authtoken and Enter: " CRP 
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp --region jp 3389 &>/dev/null &
 echo Please wait downloading file install
