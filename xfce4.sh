@@ -6,7 +6,7 @@ read -p "Paste Ngrock Authtoken: " CRP
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp --region ap 3389 &>/dev/null &
 echo Please wait downloading file install
-echo "Wait 2 Minutes"
+echo "Chờ khoảng 5 phút, nếu thấy lâu quá bấm Enter cái"
 sudo apt-get update > /dev/null 2>&1
 echo "Install App"
 sudo apt install firefox -y > /dev/null 2>&1
