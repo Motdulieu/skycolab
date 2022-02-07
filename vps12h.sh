@@ -4,7 +4,7 @@ unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip.1 > /dev/null 2>&1
 read -p "Paste Ngrock Authtoken and Enter: " CRP 
 ./ngrok authtoken $CRP 
-nohup ./ngrok tcp --region ap 3389 &>/dev/null &
+nohup ./ngrok tcp --region jp 3389 &>/dev/null &
 echo Please wait downloading file install
 echo "Chờ khoảng 5 phút, nếu thấy lâu quá chưa hiện IP bấm Enter cái"
 sudo apt-get update > /dev/null 2>&1
