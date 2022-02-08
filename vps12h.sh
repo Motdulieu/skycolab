@@ -2,6 +2,7 @@ read -p "Paste Token Ngrok and Enter: " CRP
 echo "Download ngrok"
 wget -O ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok.zip > /dev/null 2>&1
+echo Choose Ngrok Region
 echo "======================="
 echo "us - United States (Ohio)"
 echo "eu - Europe (Frankfurt)"
