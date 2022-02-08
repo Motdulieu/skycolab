@@ -2,9 +2,19 @@ echo "Download ngrok"
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip.1 > /dev/null 2>&1
-read -p "Paste Ngrock Authtoken and Enter: " CRP 
-./ngrok authtoken $CRP 
-nohup ./ngrok tcp --region jp 3389 &>/dev/null &
+echo "======================="
+echo choose ngrok region
+echo "======================="
+echo "us - United States (Ohio)"
+echo "eu - Europe (Frankfurt)"
+echo "ap - Asia/Pacific (Singapore)"
+echo "au - Australia (Sydney)"
+echo "sa - South America (Sao Paulo)"
+echo "jp - Japan (Tokyo)"
+echo "in - India (Mumbai)"
+read -p "choose ngrok region: " CRP
+./ngrok tcp --region $CRP 3388 &>/dev/null &
+clear
 echo Please wait downloading file install
 echo "Chờ khoảng 5 phút, nếu thấy lâu quá chưa hiện IP bấm Enter cái"
 sudo apt-get update > /dev/null 2>&1
@@ -21,6 +31,7 @@ dpkg --add-architecture i386 && apt-get update && apt-get install wine32 > /dev/
 apt-get install wine32 > /dev/null 2>&1
 sudo apt-get install terminator > /dev/null 2>&1
 curl https://rclone.org/install.sh | sudo bash > /dev/null 2>&1
+clear
 echo "Install RDP"
 sudo apt install -y xrdp > /dev/null 2>&1
 sudo apt install xfce4 -y > /dev/null 2>&1
