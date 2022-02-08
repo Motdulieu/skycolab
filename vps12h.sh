@@ -1,8 +1,7 @@
 echo "Download ngrok"
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
-unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
-read -p "Paste Token Ngrok and Enter: " CRP
-./ngrok authtoken $CRP
+wget -O ngrok.sh https://raw.githubusercontent.com/Motdulieu/skycolab/main/ngrok.sh > /dev/null 2>&1
+chmod +x ngrok.sh
+./ngrok.sh
 echo "======================="
 echo choose ngrok region
 echo "======================="
@@ -13,7 +12,7 @@ echo "au - Australia (Sydney)"
 echo "sa - South America (Sao Paulo)"
 echo "jp - Japan (Tokyo)"
 echo "in - India (Mumbai)"
-read -p "choose ngrok region: " CRP
+read -p "Choose Ngrok Region: " CRP
 nohup ./ngrok tcp --region $CRP 3388 &>/dev/null &
 echo Please wait downloading file install
 echo "Chờ khoảng 5 phút, nếu thấy lâu quá chưa hiện IP bấm Enter cái"
@@ -38,7 +37,7 @@ sudo apt-get install xfce4 xfce4-terminal -y > /dev/null 2>&1
 echo "Start RDP"
 sudo sed -i.bak '/fi/a xfce4-session \n' /etc/xrdp/startwm.sh > /dev/null 2>&1
 sudo service xrdp start > /dev/null 2>&1
-echo XRDP Address:
+echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "===================================="
 echo "Không Đóng TAB này"
