@@ -1,9 +1,8 @@
+read -p "Paste Token Ngrok and Enter: " CRP
 echo "Download ngrok"
-wget -O ngrok.sh https://raw.githubusercontent.com/Motdulieu/skycolab/main/ngrok.sh > /dev/null 2>&1
-chmod +x ngrok.sh
-./ngrok.sh
-echo "======================="
-echo choose ngrok region
+wget -O ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+unzip ngrok.zip > /dev/null 2>&1
+read -p "Choose Ngrok Region: " CRP
 echo "======================="
 echo "us - United States (Ohio)"
 echo "eu - Europe (Frankfurt)"
@@ -12,8 +11,8 @@ echo "au - Australia (Sydney)"
 echo "sa - South America (Sao Paulo)"
 echo "jp - Japan (Tokyo)"
 echo "in - India (Mumbai)"
-read -p "Choose Ngrok Region: " CRP
-nohup ./ngrok tcp --region $CRP 3388 &>/dev/null &
+echo "======================="
+nohup ./ngrok tcp --region $CRP 3389 &>/dev/null &
 echo Please wait downloading file install
 echo "Chờ khoảng 5 phút, nếu thấy lâu quá chưa hiện IP bấm Enter cái"
 sudo apt-get update > /dev/null 2>&1
