@@ -1,5 +1,5 @@
 # VPS Linux Colab
-## [Colab RDP](vps12h/vps12h.ipynb) &nbsp;&nbsp; [![Open in Colab][Colab Badge]][RDP Notebook] [![RDP Issues][RDP Issues]](https://raw.githubusercontent.com/Motdulieu/skycolab/main/vps12h.sh)
+## open colab paste code and run:
 ```
 ! wget https://raw.githubusercontent.com/Motdulieu/skycolab/main/vps12h.sh &> /dev/null
 ! chmod +x vps12h.sh
