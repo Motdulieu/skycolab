@@ -23,7 +23,7 @@ apt-get install wine32 > /dev/null 2>&1
 curl https://rclone.org/install.sh | sudo bash > /dev/null 2>&1
 echo "Install RDP..."
 sudo apt install -y xrdp > /dev/null 2>&1
-sudo apt-get -qq install xfce4 xfce4-terminal xfce4-taskmanager htop leafpad chromium-browser > /dev/null 2>&1
+sudo apt install --assume-yes xfce4 desktop-base xfce4-terminal > /dev/null 2>&1
 echo "Start RDP..."
 sudo sed -i.bak '/fi/a xfce4-session \n' /etc/xrdp/startwm.sh > /dev/null 2>&1
 sudo service xrdp start > /dev/null 2>&1
