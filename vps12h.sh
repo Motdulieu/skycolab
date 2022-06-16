@@ -20,19 +20,18 @@ sudo apt install mousepad > /dev/null 2>&1
 sudo apt install mkvtoolnix mkvtoolnix-gui > /dev/null 2>&1
 dpkg --add-architecture i386 && apt-get update && apt-get install wine32 > /dev/null 2>&1
 apt-get install wine32 > /dev/null 2>&1
-sudo apt-get install terminator > /dev/null 2>&1
 curl https://rclone.org/install.sh | sudo bash > /dev/null 2>&1
 echo "Install RDP..."
 sudo apt install -y xrdp > /dev/null 2>&1
-sudo apt-get install xfce4 xfce4-terminal -y > /dev/null 2>&1
+sudo apt-get -qq install xfce4 xfce4-terminal xfce4-taskmanager htop leafpad chromium-browser > /dev/null 2>&1
 echo "Start RDP..."
 sudo sed -i.bak '/fi/a xfce4-session \n' /etc/xrdp/startwm.sh > /dev/null 2>&1
 sudo service xrdp start > /dev/null 2>&1
+echo "===================================="
 echo RDP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
-echo "===================================="
+echo "User: motdulieu | Pass: 123456"
 echo "Không Đóng TAB này"
-echo "user: motdulieu | pass: 123456"
 echo "RDP Windows By Motdulieu"
 echo "===================================="
 sleep 43210
