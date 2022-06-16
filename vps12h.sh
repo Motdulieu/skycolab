@@ -21,6 +21,7 @@ sudo apt install mkvtoolnix mkvtoolnix-gui > /dev/null 2>&1
 dpkg --add-architecture i386 && apt-get update && apt-get install wine32 > /dev/null 2>&1
 apt-get install wine32 > /dev/null 2>&1
 curl https://rclone.org/install.sh | sudo bash > /dev/null 2>&1
+sudo apt-get install terminator > /dev/null 2>&1
 echo "Install RDP..."
 sudo apt install -y xrdp > /dev/null 2>&1
 echo "Start RDP..."
