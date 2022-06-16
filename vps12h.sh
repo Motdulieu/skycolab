@@ -16,6 +16,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb >
 sudo dpkg -i google-chrome-stable_current_* > /dev/null 2>&1
 sudo apt-get -f install > /dev/null 2>&1
 sudo apt-get install xarchiver > /dev/null 2>&1
+sudo apt install mousepad > /dev/null 2>&1
 sudo apt install mkvtoolnix mkvtoolnix-gui > /dev/null 2>&1
 dpkg --add-architecture i386 && apt-get update && apt-get install wine32 > /dev/null 2>&1
 apt-get install wine32 > /dev/null 2>&1
