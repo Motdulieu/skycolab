@@ -23,8 +23,7 @@ apt-get install wine32 > /dev/null 2>&1
 curl https://rclone.org/install.sh | sudo bash > /dev/null 2>&1
 sudo apt install xfce4 -y > /dev/null 2>&1
 sudo apt-get install xfce4 xfce4-terminal -y > /dev/null 2>&1
-echo "CHỌN SỐ 2"
-sudo update-alternatives --config x-terminal-emulator > /dev/null 2>&1
+sudo apt remove --assume-yes gnome-terminal
 echo "Install RDP..."
 sudo apt install -y xrdp > /dev/null 2>&1
 echo "Start RDP..."
